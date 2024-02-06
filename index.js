@@ -13,9 +13,16 @@ exports.readObservation = (file, context) => {
     })
     .pipe(csv())
     .on('data', (row) => {
-        console.log('Row data:', row);
+        printDict(row);
     })
     .on('end', () => {
         console.log('End of CSV file');
     });
 };
+
+// Helper function to print each element of the data to the console separately
+function printDict(row) {
+    for (let key in row) {
+        console.log(`${key}: ${row[key]}`);
+    }
+}
