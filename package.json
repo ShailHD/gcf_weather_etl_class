@@ -2,5 +2,15 @@
   "dependencies": {
     "@google-cloud/storage": "^7.7.0",
     "csv-parser": "^3.0.0"
-  }
+  },
+  "name": "weather_project",
+  "description": "This Cloud Function will respond to a new document in a GCP Storage bucket and will extract the CSV data, transform it, and load it into a BigQuery table.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
